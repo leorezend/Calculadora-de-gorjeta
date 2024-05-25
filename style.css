@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Mono", monospace;
+}
+:root {
+    --cor1: #f3f9fa;
+    --cor2: #c5e4e7;
+    --cor3: #9ebbbd;
+    --cor4: #7f9d9f;
+    --cor5: #5e7a7d;
+    --cor6: #547878;
+    --cor7: #3d6666;
+    --cor8: #00474b;
+    --ciano: #26c2ae;
+    --white: #ffff;
+}
+body {
+    background-color: var(--cor2);
+}
+.nome h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 2.8rem;
+    font-size: 26px;
+}
+/* titulo */
+main {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 25px 25px 0 0;
+}
+/* titulo */
+
+/* conta */
+.conta {
+    margin-bottom: 2rem;
+}
+.conta label {
+    color: var(--cor5);
+    font-weight: 700;
+}
+.conta div {
+    margin-top: 0.4rem;
+    background-color: var(--cor1);
+    padding: 0.4rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+.conta input {
+    border: none;
+    text-align: right;
+    width: 100%;
+    background: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cor8);
+    outline: none; /* Remover o outline padrão */
+}
+.conta input::placeholder {
+    color: var(--cor3);
+}
+.conta:has(input:focus) div, .conta:has(input:hover) div {
+    outline: 2px solid var(--ciano);
+    cursor: pointer;
+    outline: none;
+}
+.bi-bi-currency-dollar, .bi-bi-people-fill {
+    color: var(--cor3);    
+}
+/* fim da conta */
+
+/* inicio da porcentagem da gorjeta */
+.gorjeta label {
+    color: var(--cor5);
+    font-weight: 700;
+}
+.gorjeta {
+    margin-bottom: 2rem;
+}
+.porcento {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+#outra {
+    width: 100%;
+    background-color: var(--cor1);
+    color: var(--cor8);
+}
+#conta::placeholder {
+    color: var(--cor3);
+}
+.gorjeta input {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    outline: none;
+    padding-block: 0.4rem;
+    border-radius: 5px;
+    background-color: var(--cor8);
+    color: var(--white);
+}
+.gorjeta .botao-ativo {
+    background-color: var(--ciano);
+    color: var(--cor8);
+}
+.porcento input[type="button"]:hover, .resultados button:hover {
+    background-color: #9fe8df;
+    cursor: pointer;
+}
+/* fim da porcentagem da gorjeta */
+
+/* inicio das pessoas */
+.pessoas {
+    margin-bottom: 2rem;
+}
+.pessoas label {
+    color: var(--cor5);
+    font-weight: 700;
+}
+.pessoas div {
+    margin-top: 0.4rem;
+    background-color: var(--cor1);
+    padding: 0.4rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+.pessoas input {
+    border: none;
+    text-align: right;
+    width: 100%;
+    background: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cor8);
+    outline: none; /* Remover o outline padrão */
+}
+.pessoas::placeholder {
+    color: var(--cor3);
+}
+.pessoas:has(input:focus) div, .pessoas:has(input:hover) div {
+    outline: 2px solid var(--ciano);
+    cursor: pointer;
+}
+/* fim das pessoas */
+.resultados {
+    background-color: var(--cor8);
+    border-radius: 15px;
+    padding: 1.5rem;
+}
+.container div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.resultados p {
+    color: var(--cor4);
+    font-size: 13px;
+}
+.resultados p strong {
+    color: var(--white);
+    font-size: 1rem;
+}
+.resultados div > strong {
+    color: var(--ciano);
+    font-size: 2rem;
+}
+.gorjeta-total {
+    margin-bottom: 1.25rem;
+}
+.total {
+    margin-bottom: 2rem;
+}
+.resultados button {
+    width: 100%;
+    color: var(--cor8);
+    background-color: var(--ciano);
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    padding-block: 0.5rem;
+}
+.conta input::-webkit-inner-spin-button, .pessoas input::-webkit-inner-spin-button {
+    display: none;
+}
+.porcento input::-webkit-inner-spin-button {
+    display: none;
+}
+#outra:focus, #outra:hover {
+    outline: 2px solid var(--ciano);
+    cursor: pointer;
+}
+@media (min-width: 920px) {
+    main {
+        display: flex;
+        gap: 3rem;
+        padding: 3rem;
+        border-radius: 25px;
+        max-width: 57.7rem;
+        margin-inline: auto;
+    }
+    main section {
+        width: 100%;
+    }
+    .gorjeta div {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .resultados {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2.5rem;
+    }
+}
